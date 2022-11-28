@@ -47,7 +47,7 @@ const headerHeight = headerWrap.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
   if (window.scrollY > headerHeight) {
       header_head.setAttribute("style", "background: white;");
-      headerlogo.setAttribute("style","content: url(../img/logo_on.png);");
+      headerlogo.setAttribute("style","content: url(img/logo_on.png);");
       headerWrap.setAttribute("style","box-shadow: 1px 2px 4px #222;");
       header_color.setAttribute("style", "color: black;");
       header_color2.setAttribute("style", "color: black;");
