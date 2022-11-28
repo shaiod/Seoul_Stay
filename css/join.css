@@ -1,0 +1,481 @@
+
+/* 서브페이지 공통 */
+nav.gnb>ul>li>a{color: #000;}
+.header_wrap{box-shadow: 1px 2px 4px #222; background: #fff;}
+.header_wrap>.gnb>h3 img{content: url(../img/logo_on.png);}
+
+@media screen and (min-width:1025px){
+/* content1 */
+a{color: #000;}
+.content_sub{width: 100%; height: 250px;  
+    display: flex; justify-content: center;}
+.content_sub>h3{position: absolute; top: 160px;
+    font-size: 43px; font-weight: bold;}
+    
+.content_sub>ul{width: 600px;}
+.content_sub>ul>li{display: inline-block; position: relative;
+    top: 100px; left: 700px; margin-right: 15px;
+    font-size: 14px;}
+    
+.content_sub>ul>li:first-child{
+    width: 12px; height: 12px;
+    cursor: pointer;}
+.content_sub>ul>li:nth-child(3){
+    color: #858585;
+}
+.content_sub>ul>li.arrow{
+    background: url(../img/Forma.png) no-repeat 0 0;
+    width: 7px; height: 12px;
+    text-indent: -9999px; overflow: hidden;}
+
+/* content2 */
+#content2{height: 2000px;}
+#content2>p{position: relative;
+    left: 350px; font-size: 15px;
+    width: 1210px; padding-top: 15px;
+    border-top: 2px solid #000;
+    text-align: center;}
+
+/* form */
+
+form{position: relative;
+    width: 1210px; height: 1720px;
+    top: 18px;left: 350px;}
+form label{font-weight: 600; color: #333;
+margin-right: 300px;}
+form label span{color: red; font-size: 16px;}
+form input{position: relative;
+border: 1px solid #dddddd;
+height: 45px; padding-left: 10px;}
+
+
+form div{border-top: 1px solid #dddddd;
+    padding-top: 20px; padding-bottom: 20px;}
+form div.file_upload2{border-top: none;}
+
+.name input{width: 396px;}
+.business input{position: relative; right: 24px;
+    width: 80px;} 
+.hypen{position:relative; margin-right: 30px;
+     right: 10px;}
+input[type="button"]{width: 100px; height: 35px; border-radius: 2px;
+    font-size: 13px; color: #333; border: 1px solid #bcbcbc;
+    background-color: #ebebeb;}
+
+.file_upload{border-top: none;}
+.file_upload .upload-name, .file_upload2 .upload-name  {
+    display: inline-block;
+    position: relative;
+    width: 330px; left: 395px;
+    height: 49px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    color: #999999;
+}
+
+.file_upload label, .file_upload2 .upload-name{
+    display: inline-block;
+    position: relative;
+    left: 390px;
+    padding: 9px 23px 5px 23px;
+    font-size: 13px; font-weight: normal;
+    color: #333; vertical-align: middle;
+    background-color: rgb(235,235,235);
+    cursor: pointer;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    height: 20px;
+    margin-left: 10px;
+}
+#file, #file2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.file_p,.file_p2{position:relative; left: 395px; top: 18px;
+    font-size: 15px; color: #7b7772;}
+.file_p2{margin-bottom: 20px;}
+#testDatepicker{position: relative;
+    right: 73px; width: 396px;
+    font-size: 15px; color: #7b7772;}
+
+
+.phone select, .phone input{position: relative;
+    right: 53px; margin-right: 20px;}
+.phone select{width: 80px; height: 49px;
+    font-size: 15px; top: 1px;
+    border: 1px solid #dddddd;}
+.phone input[type="tel"]{width: 80px; height: 45px;}
+.hypen2{position: relative; right: 65px;}
+
+.email input, .email .gol, .email select{position: relative; right: 53px;}
+.email input[type="email"]{width: 126px;}
+.email select{height: 49px; border: 1px solid #dddddd;
+    font-size: 15px;}
+.email input[type="button"]{right: 470px; top: 50px;}
+.email p{position: relative;
+top: 5px;font-size: 15px; color: #7b7772;
+line-height: 1.4; }
+.email p:first-of-type{width:300px; left: 510px;}
+.email p:last-of-type{width:410px; left: 400px;}
+
+.password input{position: relative;
+    left: 23px;
+    width: 396px; height: 45px;}
+.password p{position:relative; left: 395px; top: 18px;
+    font-size: 15px; color: #7b7772;
+    margin-bottom: 15px;}
+
+.pas_con input{position: relative;
+    right: 13px;
+    width: 396px; height: 45px;}
+
+.agree{height: 380px;}
+.agree h4{font-weight: bold; margin-bottom: 30px;}
+.agree p{font-size: 15px; color: #7b7772;
+    line-height: 2;}
+
+.agree_ag{height: 30px;
+    border-bottom: 1px solid #dddddd;}
+.agree_ag input[type="radio"]{position: relative; top: 5px; right: 230px;}
+.agree_ag>.radio_p{position: relative; font-size: 15px; right: 220px;}
+.agree_ag>.radio_p:first-of-type{margin-right: 30px;}
+.agree_ag_mobile{display: none;}
+input[type="submit"]{position: absolute; height: 58px;
+padding: 20px; border: 1px solid #c5c5c5;
+left: 550px; bottom: 150px;
+font-size: 16px;}
+}
+
+/* TABLET */
+@media screen and (min-width:769px) and (max-width:1025px){
+/* content1 */
+a{color: #000;}
+.content_sub{width: 100%; height: 250px;  
+    display: flex; justify-content: center;}
+.content_sub>h3{position: absolute; 
+    top: 160px; 
+    font-size: 43px; font-weight: bold;}
+    
+.content_sub>ul{width: 600px;}
+.content_sub>ul>li{display: inline-block; position: relative;
+    top: 120px; left: 520px; margin-right: 15px;
+    font-size: 14px;}
+    
+.content_sub>ul>li:first-child{
+    width: 12px; height: 12px;
+    cursor: pointer;}
+.content_sub>ul>li:nth-child(3){
+    color: #858585;
+}
+.content_sub>ul>li.arrow{
+    background: url(../img/Forma.png) no-repeat 0 0;
+    width: 7px; height: 12px;
+    text-indent: -9999px; overflow: hidden;}
+
+/* content2 */
+
+#content2{height: 2000px;}
+#content2>p{position: relative;
+    font-size: 15px;
+    width: 920px; margin-left: 30px;
+    border-top: 2px solid #000;
+    text-align: center;}
+
+/* form */
+
+form{position: relative;
+    width: 920px; height: 1800px;
+    top: 18px; left: 30px;}
+form label{font-weight: 600; color: #333;
+margin-right: 100px;}
+form label span{color: red; font-size: 16px;}
+form input{position: relative;
+border: 1px solid #dddddd;
+height: 45px;}
+
+
+form div{border-top: 1px solid #dddddd;
+    padding-top: 20px; padding-bottom: 20px;}
+form div.file_upload2{border-top: none;}
+.name input{margin-top: 20px; width: 396px;}
+.business input{position: relative; 
+    width: 80px; right: 25px;} 
+.hypen{position:relative; margin-right: 30px;
+     right: 10px;}
+input[type="button"]{width: 100px; height: 35px; border-radius: 2px;
+    font-size: 13px; color: #333; border: 1px solid #bcbcbc;
+    background-color: #ebebeb;}
+
+.file_upload{border-top: none;}
+.file_upload .upload-name, .file_upload2 .upload-name {
+    display: inline-block;
+    position: relative;
+    width: 330px; left: 195px;
+    height: 49px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    color: #999999;
+}
+
+
+.file_upload label,.file_upload2 label {
+    display: inline-block;
+    position: relative;
+    left: 185px;
+    padding: 9px 23px 5px 23px;
+    font-size: 13px; font-weight: normal;
+    color: #333; vertical-align: middle;
+    background-color: rgb(235,235,235);
+    cursor: pointer;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#file, #file2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.file_p,.file_p2{position:relative; left: 200px; top: 18px;
+    font-size: 15px; color: #7b7772;}
+.file_p2{margin-bottom: 20px;}
+#testDatepicker{position: relative;
+    right: 73px; width: 396px;
+    font-size: 15px; color: #7b7772;}
+
+
+.phone select, .phone input{position: relative;
+    right: 53px; margin-right: 20px;}
+.phone input[type="button"]{right: 74px;}
+.phone select{width: 80px; height: 49px;
+    font-size: 15px; top: 1px;
+    border: 1px solid #dddddd;}
+.phone input[type="tel"]{width: 80px; height: 45px;}
+.hypen2{position: relative; right: 65px;}
+
+.email input, .email .gol, .email select{position: relative; right: 53px;}
+.email input[type="email"]{width: 126px;}
+.email select{width: 120px; height: 49px; 
+    border: 1px solid #dddddd;
+    font-size: 15px;}
+.email input[type="button"]{right: 470px; top: 50px;}
+.email p{position: relative; 
+top: 5px;font-size: 15px; color: #7b7772;
+line-height: 1.4; }
+.email p:first-of-type{width:300px; left: 310px;}
+.email p:last-of-type{width:410px; left: 200px;}
+.password input{position: relative;
+    width: 396px; height: 45px;}
+.password p{position:relative;
+    top: 20px; left: 175px;
+    font-size: 15px; color: #7b7772;
+    margin-bottom: 20px;}
+
+.pas_con input{position: relative;
+    width: 396px; height: 45px;
+    right: 35px;}
+
+.agree{height: 380px;}
+.agree h4{font-weight: bold; margin-bottom: 30px;}
+.agree p{font-size: 15px; color: #7b7772;
+    line-height: 2;}
+
+.agree_ag{display: none;}
+
+.agree_ag_mobile{position: relative; height: 80px;
+    top: 100px; border-bottom: 1px solid #dddddd;}
+.agree_ag_mobile>input{ top: 5px;
+    margin-top: 25px; margin-right: 10px;
+    margin-left: 20px;}
+
+
+input[type="submit"]{position: absolute; height: 58px;
+padding: 20px; border: 1px solid #c5c5c5;
+left: 400px; bottom: 50px;
+font-size: 16px;}
+}
+
+/* MOBILE */
+@media screen and (max-width:768px){
+/* content1 */
+a{color: #000;}
+.content_sub{width: 100%; height: 250px;  
+    display: flex; justify-content: center;}
+.content_sub>h3{position: absolute; 
+    top: 180px; 
+    font-size: 43px; font-weight: bold;}
+    
+.content_sub>ul{width: 600px;}
+.content_sub>ul>li{display: inline-block; position: relative;
+    top: 120px; left: 200px; margin-right: 15px;
+    font-size: 14px;}
+    
+.content_sub>ul>li:first-child{
+    width: 12px; height: 12px;
+    cursor: pointer;}
+.content_sub>ul>li:nth-child(3){
+    color: #858585;
+}
+.content_sub>ul>li.arrow{
+    background: url(../img/Forma.png) no-repeat 0 0;
+    width: 7px; height: 12px;
+    text-indent: -9999px; overflow: hidden;}
+
+/* content2 */
+
+#content2{height: 2000px;}
+#content2>p{position: relative;
+    font-size: 15px;
+    width: 700px; margin-left: 15px;
+    border-top: 2px solid #000;
+    text-align: center;}
+
+/* form */
+
+form{position: relative;
+    width: 700px; height: 2200px;
+    top: 18px; left: 20px;}
+form label{font-weight: 600; color: #333;
+margin-right: 300px;}
+form label span{color: red; font-size: 16px;}
+form input{position: relative;
+border: 1px solid #dddddd;
+height: 45px;}
+
+
+form div{border-top: 1px solid #dddddd;
+    padding-top: 20px; padding-bottom: 20px;}
+
+.name input{margin-top: 20px; width: 600px;}
+.business input{position: relative; top: 20px;
+    width: 500px;} 
+.hypen{position:relative; margin-left: 10px;
+    top: 20px;}
+input[type="button"]{width: 150px; height: 35px; border-radius: 2px;
+    font-size: 13px; color: #333; border: 1px solid #bcbcbc;
+    background-color: #ebebeb;}
+
+.file_upload, .file_upload2{border-top: none;
+    position: relative; top: -8px;}
+
+.file_upload .upload-name, .file_upload2 .upload-name {
+    display: inline-block;
+    position: relative;
+    width: 485px;
+    height: 49px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    color: #999999;}
+
+.file_upload label, .file_upload2 label {
+    display: inline-block;
+    position: relative;
+    left: 500px; bottom: 22px;
+    padding: 9px 48px 5px 48px;
+    font-size: 13px; font-weight: normal;
+    color: #333; vertical-align: middle;
+    background-color: rgb(235,235,235);
+    cursor: pointer;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.file_upload2 label{
+    top: -42px;
+}
+
+#file, #file2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.file_p,.file_p2{position:relative; left: 0px; bottom: 10px;
+    font-size: 15px; color: #7b7772;}
+.file_p{top: 15px;}
+
+#testDatepicker{position: relative;
+    width: 600px; top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px; color: #7b7772;}
+
+
+.phone select, .phone input{position: relative;
+    width: 140px; margin-right: 20px;}
+
+.phone select{height: 49px;
+    font-size: 15px; right: 450px;
+    top: 50px;
+    border: 1px solid #dddddd;}
+.phone input{left: 180px;}
+.phone input[type="button"]{left: 170px;}
+.phone input[type="tel"]{height: 45px;}
+.hypen2:nth-of-type(1){position: relative; right: 457px; top: 50px;}
+.hypen2:nth-of-type(2){position: relative; left: 169px; top: 3px;}
+
+.email input, .email .gol, .email select{position: relative;}
+.email input[type="email"]{width: 200px;}
+.email input[type="email"]:first-of-type{top: 50px; right: 450px;}
+.email input[type="email"]:nth-of-type(2){left: 250px;}
+.email .gol{right: 440px; top: 50px;}
+.email select{width: 150px;height: 49px;
+    border: 1px solid #dddddd;
+    font-size: 15px; 
+    top: 1px; left: 250px;}
+    
+.email input[type="button"]{top: 50px; right: 362px;}
+.email p{position: relative;
+top: 5px;font-size: 15px; color: #7b7772;
+line-height: 1.4; }
+.email p:first-of-type{width:300px; left: 170px;}
+.email p:last-of-type{width:410px;}
+
+.password input{position: relative;
+    top: 15px;
+    width: 396px; height: 45px;}
+.password p{position:relative;  top: 20px;
+    font-size: 15px; color: #7b7772;
+    margin-bottom: 15px;}
+
+.pas_con input{position: relative; top: 15px;
+    width: 396px; height: 45px;
+    margin-bottom: 20px;}
+
+.agree{height: 380px;}
+.agree h4{font-weight: bold; margin-bottom: 30px;}
+.agree p{font-size: 15px; color: #7b7772;
+    line-height: 2;}
+
+.agree_ag{display: none;}
+
+.agree_ag_mobile{position: relative; height: 80px;
+    top: 100px; border-bottom: 1px solid #dddddd;}
+.agree_ag_mobile>input{ top: 5px;
+    margin-top: 25px; margin-right: 10px;
+    margin-left: 20px;}
+
+
+input[type="submit"]{position: absolute; height: 58px;
+padding: 20px; border: 1px solid #c5c5c5;
+left: 300px; bottom: 80px;
+font-size: 16px;}
+}

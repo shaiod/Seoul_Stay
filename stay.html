@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울스테이 | 서울스테이란</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/stay.css" />
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <div id="header">
+    </div>
+    <div id="content1">
+        <div class="content_sub">
+            <h3>서울스테이란</h3>
+            <ul>
+                <li><a href="./main.html">
+                    <img src="./img/home_icon.png" />
+                </a></li>
+                <li class="arrow">화살표</li>
+                <li>서울스테이 소개</li>
+                <li class="arrow">화살표</li>
+                <li>서울스테이</li>
+                <li class="arrow">화살표</li>
+                <li>서울스테이란</li>
+            </ul>
+        </div>
+        <div class="content_img">이미지</div>
+    </div>
+    <div id="content2">
+        <div class="seoulstayW">
+            <p>SEOULSTAY로고</p>
+            <dl>
+                <dt>서울스테이 란?</dt>
+                <dd>서울스테이(Seoul Stay)는 서울시 25개 자치구에 등록한 ‘외국인관광 도시민박업’ 및 ‘한옥체험업’이 등록할 수 있는 대체숙박업 브랜드입니다. 서울스테이에 등록된 숙소들은 번역, 문패, 운영물품, 홍보마케팅 등 다양한 혜택을 지원받을 수 있으며 매년 개최되는 사업설명회, 교육 등의 행사 참가 기회가 주어집니다.
+                </dd>
+                <dd><a href="#">외국인관광 도시민박업 바로가기</a></dd>
+                <dd><a href="#">한옥체험업 바로가기</a></dd>
+            </dl>
+        </div>
+        <div class="seoulstayB">
+            <dl>
+            <dt>SEOULSTAY로고</dt>
+            <dd>서울스테이(SeoulStay)는 서울의 '외국인관광 도시민박업'과 '한옥체험업'을 상징하는 브랜드입니다. 다양한 색과 함께 이뤄진 N서울타워와 서울스테이(SeoulStay)가
+            <span>연결되는 형태의 로고는 서울스테이에서의 경험이 서울에 대한 즐거운 기억으로 남도록 만드는 브랜드 가치를 담았습니다.</span></dd>
+            <dt>SEOULSTAY로고_N</dt>
+            <dd>다양한 색으로 이뤄진 N서울타워 라인은 서울을 방문하는 관광객에게 남겨질 다채롭고 즐거운 경험을 상징합니다.</dd>
+            <dt>SEOULSTAY로고_L</dt>
+            <dd>견고한 지붕 라인은 서울시 등록숙소라는 신뢰감과 서울스테이 공간 안에서 모든 이가 느낄 수 있는 안정감을 나타냅니다.</dd>
+            </dl>
+        </div>
+    </div>
+    <div id="content3">
+        <h3>서울 스테이 홍보영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XntLgRIKJiw" title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <footer id="footer">
+    </footer>
+</div>
+<!-- //wrap -->
+<script>
+    async function fetchHtmlAsText(url){
+    const response = await fetch(url);
+    return await response.text();}
+            
+    async function importPage(target){
+    document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target+'.html');}
+    importPage('header');
+    importPage('footer');
+</script>
+</body>
+</html>

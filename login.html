@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울스테이 | 로그인</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+        </div>
+        <div id="content1">
+            <div class="content_sub">
+                <h3>로그인</h3>
+                <ul>
+                    <li><a href="./main.html">
+                        <img src="./img/home_icon.png" />
+                    </a></li>
+                    <li class="arrow">화살표</li>
+                    <li>서비스</li>
+                    <li class="arrow">화살표</li>
+                    <li>로그인</li>
+                </ul>
+            </div>
+        </div>
+        <div id="content2">
+            <div class="login_form">
+                <h4>회원</h4>
+                <p>신청 하실 때 입력하신 정보를 입력해주세요.</p>
+                <input type="email" placeholder="이메일 주소 입력"/>
+                <input type="password" placeholder="비밀번호 입력"/>
+                <input type="button" class="button1" value="로그인"/>
+                <input type="button" value="회원가입" onclick = "location.href = './join.html' "/>
+                <ul>
+                    <li><a href="#">이메일 주소 찾기</a></li>
+                    <li><a href="#">비밀번호 찾기</a></li>
+                </ul>             
+            </div>
+        </div>
+        <footer id="footer">
+        </footer>
+    </div>
+<script>
+async function fetchHtmlAsText(url){
+const response = await fetch(url);
+return await response.text();}
+                    
+async function importPage(target){
+document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target+'.html');}
+importPage('header');
+importPage('footer');
+</script>    
+</body>
+</html>

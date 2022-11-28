@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울스테이 | 서울스테이</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/main.js"></script>
+    <script>
+        var index = 0;  
+        window.onload = function(){
+            slideShow();
+        }
+        
+        function slideShow() {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none"; 
+        }
+        index++;
+        if (index > x.length) {
+            index = 1; 
+        }   
+        x[index-1].style.display = "block";
+        setTimeout(slideShow, 8000);
+     
+    }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+        </div>
+    <div id="main-banner">
+        <ul class="slide-show">
+            <li class="slide">
+                <img src="./img/background.png" />
+            </li>
+            <li class="slide">
+                <img src="./img/background1.png" />
+            </li>
+            <li class="slide"> 
+                <img src="./img/background2.png" />
+            </li>
+        </ul>
+        <div class="new_menu">
+            <dl>
+             <dt>신규 숙소 등록</dt>
+             <dd>숙소를 등록하여 관광객에게 홍보하고 지원사항을 확인하세요.</dd>
+             <dd class="menu_logo1">로고</dd>
+            </dl>
+            <dl>
+             <dt>운영물품</dt>
+             <dd>올해의 운영물품을 확인하고 신청하세요.</dd>
+             <dd class="menu_logo2">로고</dd>
+            </dl>
+         </div>
+         <div class="info">
+             <h3>공지사항</h3>
+             <ul class="info_button">
+             <li class="btn_top"><a href="#">버튼1</a></li>
+             <li class="btn_bottom"><a href="#">버튼2</a></li>
+             </ul>
+             <span class="plus_info">안내</span>
+             <ul class="info_plus">
+             <li><a href="#">2022 서울스테이 사업설명회 참가 안내<span class="date_info">2022-10-04</span></a></li>
+             <li><a href="#">2022 우수 서울스테이 선정 최종 결과 발표<span class="date_info">2022-08-05</span></a></li>
+             <li><a href="#">2022 운영물품 지원 안내<span class="date_info">2022-07-07</span></a></li>
+             <li><a href="#">2022 우수 서울스테이 선정 참가 업체 모집 공고<span class="date_info">2022-06-17</span></a></li>
+             <li><a href="#">서울스테이 탈퇴 안내<span class="date_info">2022-02-18</span></a></li>
+             </ul>
+             <span class="info_plus_">
+                <a href="notice.html"><img src="./img/more_btn.png"></a></span>
+         </div>
+    </div>
+    <footer id="footer">
+    </footer>
+</div>
+<script>
+    async function fetchHtmlAsText(url){
+    const response = await fetch(url);
+    return await response.text();}
+            
+    async function importPage(target){
+    document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target+'.html');}
+    importPage('header');
+    importPage('footer');
+</script>
+</body>
+</html>

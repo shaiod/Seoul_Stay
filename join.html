@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울스테이 | 회원가입</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/join.css" />
+    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#testDatepicker").datepicker({
+                showMonthAfterYear: true,
+                dateFormat: 'yy-mm-dd',
+                firstDay: 0, //일요일부터 시작
+                changeMonth: true,
+                changeYear: true,
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                maxDate: +0,
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+        </div>
+        <div id="content1">
+            <div class="content_sub">
+                <h3>회원가입</h3>
+                <ul>
+                    <li><a href="./main.html">
+                        <img src="./img/home_icon.png" />
+                    </a></li>
+                    <li class="arrow">화살표</li>
+                    <li>서비스</li>
+                    <li class="arrow">화살표</li>
+                    <li>회원가입</li>
+                </ul>
+            </div>
+        </div>
+        <div id="content2">
+        <p>회원가입 후 '서울스테이 숙소 등록' 신청 및 관리자 승인 시 서울스테이 등록이 최종 완료되며, 1 계정 당 1개 숙소(관광사업등록증 기준)만 등록 가능합니다.</p>
+        <form action="/" method="post">
+            <fieldset>
+                <legend class="blind">회원가입 폼</legend>
+                <div class="name">
+                <label for="name">대표자 성명<span>*</span></label>
+                <input type="text" id="name"/>
+                </div>
+                </fieldset>
+                <div class="business">
+                <label for="bu_num1">사업자등록번호<span>*</span></label>
+                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
+                id="bu_num1" maxlength="3" />
+                <span class="hypen">-</span>
+                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
+                id="bu_num2" maxlength="2" />
+                <span class="hypen">-</span>
+                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
+                id="bu_num3" maxlength="5" />
+                <input type="button" value="중복확인">
+                <div class="file_upload">
+                <input class="upload-name" value="사업자등록증 사본 첨부" style="font-size: 15px; color: #333;" >
+                <label for="file">파일 선택</label>
+                <input type="file" id="file">
+                <p class="file_p">5MB 초과 대용량 사진파일 첨부불가</p>
+                </div>
+                </div>
+                <div class="tour">
+                <label for="testDatepicker">관광사업등록증 발급일<span>*</span></label>
+                <input type="text" id="testDatepicker" placeholder="YYYY-MM-DD 형식으로 입력해주세요." />
+                <div class="file_upload2">
+                <input class="upload-name" value="관광사업등록증 사본 첨부" style="font-size: 15px; color: #333;">
+                <label for="file2">파일 선택</label>
+                <input type="file" id="file2" />
+                <p class="file_p2">5MB 초과 대용량 사진파일 첨부불가</p>
+                </div>
+                <div class="phone">
+                <label for="tel">연락처(휴대폰 번호)<span>*</span></label>
+                    <select name="tel" id="tel">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select>
+                    <span class="hypen2">-</span>
+                    <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
+                    maxlength="4"/>
+                    <span class="hypen2">-</span>
+                    <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" 
+                    maxlength="4"/>
+                    <input type="button" value="인증번호 받기">
+                </div>
+                <div class="email">
+                    <label for="email">이메일 주소(아이디)<span>*</span></label>
+                        <input type="email" id="email" placeholder="이메일 입력" style="font-size: 15px; color: #333;">
+                        <span class="gol">@</span>
+                        <input type="email" id="email_a"/>
+                        <select name="email" class="email_">
+                            <option value="직접입력">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="hotmail.com">hotmail.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="018">yahoo.co.kr</option>
+                        </select>
+                        <input type="button" value="중복확인">
+                        <p>로그인시 사용할 이메일 주소와 비밀번호이므로 유효한 이메일로 기입 부탁드립니다.</p>
+                        <p>※ 기입하신 이메일 주소는 숙소정보 등록 시, 홈페이지 상에 공개되는 메일 주소인 점 참고해주시기 바랍니다.</p>
+                    </div>
+                <div class="password">
+                <label for="password">비밀번호<span>*</span></label>
+                <input type="password" id="password" placeholder="비밀번호" style="font-size: 15px; color: #7b7772;" />
+                <p>영문,숫자,특수문자 포함 8자 이상 16자 이하</p>
+                </div>
+                <div class="pas_con">
+                <label for="con">비밀번호 확인<span>*</span></label>
+                <input type="password" id="con" placeholder="비밀번호 확인" style="font-size: 15px; color: #7b7772;"/>
+                </div>
+                <div class="agree">
+                <h4>개인정보 수집&#183;이용 관한 동의</h4>
+                <p>
+                개인정보 수집&#183;이용 관한 동의<br>
+
+                서울스테이(Seoul Stay) 운영과 관련하여, 아래의 내용과 같이 본인의 개인정보를 수집·이용하는 것에 동의합니다. 서울스테이는 서울관광재단 개인정보처리방침을 따르며, 자세한 개인정보처리방침은 본 링크에서 확인해주시기 바랍니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.<br>
+                ① 개인정보 수집·이용 목적<br>
+                서울시 외국인관광 도시민박업 및 한옥체험업 홍보·지원을 위한 최소 정보의 수집과 이용<br>
+                
+                ② 개인정보의 수집항목<br>
+                홈페이지 가입 및 서울스테이 숙소 등록 시 필요한 정보(숙소명, 주소, 사업자등록번호, 담당자 번호 등)<br>
+                
+                ③ 개인정보의 처리, 처리항목 보유기간<br>
+                개인정보처리 지침에 따라 일정 기간 동안 보유<br>
+                * 홈페이지 회원(회원 탈퇴 후 3년), 서울스테이 등록숙소 정보(숙소 등록 후 3년)<br>
+                
+                ④ 동의 거부 권리 안내 : 신청자는 본 개인정보 수집·이용에 대한 동의를 거부할 수 있으며, 이 경우 홈페이지 가입 및 숙소 정보 등록 기회 제공이 제한됩니다.
+                </p>
+                </div>
+                <div class="agree_ag">
+                <label for="agree_">개인정보 수집이용 동의서에 동의합니다</label>
+                <input type="radio" id="agreey" value="동의" style="width:20px;height:20px;accent-color: red;"><span class="radio_p">동의</span>
+                <input type="radio" id="agreen" value="동의하지 않음" style="width:20px;height:20px;accent-color: red;"checked><span class="radio_p">동의하지 않음</span>
+                </div>
+                <div class="agree_ag_mobile">
+                <label for="agree_">개인정보 수집이용 동의서에 동의합니다</label><br>
+                <input type="radio" name="agree" value="동의" style="width:20px;height:20px;accent-color: red;"><span class="radio_p">동의</span>
+                <input type="radio" name="agree" value="동의하지 않음" style="width:20px;height:20px;accent-color: red;"checked><span class="radio_p">동의하지 않음</span>
+                </div>
+                <input class="submit" type="submit" value="회원가입">
+            </fieldset>
+        </form>   
+        </div>
+        <footer id="footer">
+        </footer>
+    </div>
+<script>
+async function fetchHtmlAsText(url){
+const response = await fetch(url);
+return await response.text();}
+                    
+async function importPage(target){
+document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target+'.html');}
+importPage('header');
+importPage('footer');
+</script>    
+</body>
+</html>
