@@ -74,7 +74,7 @@ input[type="button"]{width: 100px; height: 35px; border-radius: 2px;
     color: #999999;
 }
 
-.file_upload label, .file_upload2 .upload-name{
+.file_upload label, .file_upload2 label{
     display: inline-block;
     position: relative;
     left: 390px;
