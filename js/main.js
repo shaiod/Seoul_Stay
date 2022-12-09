@@ -64,7 +64,6 @@ window.addEventListener("scroll", () => {
     header_color3.setAttribute("style", "color: ;");
     header_color4.setAttribute("style", "color: ;");
     header_color5.setAttribute("style", "color: ;");
-    header_menu.setAttribute("style","background: ;");
      }
 });
 
@@ -76,11 +75,11 @@ window.addEventListener("scroll", () => {
 const btnTop = document.querySelector('.btn_top');
 const btnBottom = document.querySelector('.btn_bottom');
 const InfoPlus = document.querySelector('.info_plus');
-const InfoSection = document.querySelectorAll('.info_plus>li');
+const InfoSection = document.querySelectorAll('.info_plus>li a');
 
-let bnnW = document.querySelector('.info_plus>li').offsetHeight;
+let bnnW = document.querySelector('.info_plus>li a').offsetHeight;
 window.addEventListener('resize',()=>{
-    bnnW = document.querySelector('.info_plus>li').offsetHeight;
+    bnnW = document.querySelector('.info_plus>li a').offsetHeight;
 })
 
 let bnnNum = 0;
