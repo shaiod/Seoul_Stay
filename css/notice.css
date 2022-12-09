@@ -6,7 +6,7 @@ nav.gnb>ul>li>a{color: #000;}
 .header_wrap>.gnb>h3 img{content: url(../img/logo_on.png);}
 
 /* PC */
-@media screen and (min-width:1025px){
+@media screen and (min-width:1280px){
 /* content1 */
 a{color: #000;}
 .content_sub{width: 100%; height: 300px;  
@@ -31,17 +31,18 @@ a{color: #000;}
 #content2{width: 100%; height: 1250px;}
 .content2_top{display: flex; flex-direction: row;
     justify-content: center; text-align: center;}
-.content2_top>ul>li{position: relative; display: inline-block; 
-    width: 100px; bottom: 30px; right: 230px;}
+.content2_top>ul>li{position: absolute; 
+    width: 100px; top: 300px; left: 390px;}
+.content2_top>ul>li:first-child{float: left; left: 290px; top: 315px;}
+.content2_top>ul>li:last-child{float: right;}
 .content2_top>ul>li:last-child:before{
     content: ''; display: block; position: relative;
-    top: 18px;
-    width: 1px; height: 15px; background: #ccc;
+    top: 18px;width: 1px; height: 15px; background: #ccc;
 }
 
 /* search */
 .content2_top>.search{position: relative;
-    bottom: 40px;left: 250px;}
+    bottom: 20px;left: 330px;}
 .content2_top>.search:focus{outline: #222;}
 
 
@@ -69,8 +70,8 @@ a{color: #000;}
 
 /* FAQ */
 
-.FAQ{position: relative; left: 120px;
-    width:1200px; font-size:16px;
+.FAQ{position: relative; left: 200px;
+    width:1300px; font-size:16px;
     line-height: 5; margin-left: 110px;}
     
 .FAQ>thead>tr>th{
@@ -99,8 +100,8 @@ a{color: #000;}
     padding-left: 50px;}
 
 
-.table_number{position: relative;
-    top: 950px; right: 620px;}
+.table_number{position: relative; width: 600px;
+    top: 950px; right: 600px;}
 
 .table_number>ul>li{display: inline-block;}
 
@@ -116,7 +117,7 @@ a{color: #000;}
 }
 
 /* TABLET */
-@media screen and (min-width:769px) and (max-width:1025px){
+@media screen and (min-width:769px) and (max-width:1280px){
     
 a{color: #000;}
 .content_sub{width: 100%; height: 300px;  
@@ -126,7 +127,7 @@ a{color: #000;}
                 
 .content_sub>ul{width: 600px;}
 .content_sub>ul>li{display: inline-block; position: relative;
-    top: 120px; left: 650px; margin-right: 15px;
+    top: 120px; left: 68vw; margin-right: 15px;
     font-size: 14px;}
             
 .content_sub>ul>li:first-child{
@@ -142,8 +143,10 @@ a{color: #000;}
 #content2{width: 100%; height: 1200px;}
 .content2_top{display: flex; flex-direction: row;
     justify-content: center; text-align: center;}
-.content2_top>ul>li{position: relative; display: inline-block; 
-    width: 100px; bottom: 30px; right: 80px;}
+.content2_top>ul>li{position: absolute; 
+    width: 100px; top: 265px; left: 130px;}
+.content2_top>ul>li:first-child{float: left; left: 30px; top: 280px;}
+.content2_top>ul>li:last-child{float: right;}
 .content2_top>ul>li:last-child:before{
     content: ''; display: block; position: relative;
     top: 18px;
@@ -178,7 +181,7 @@ select {background:url(../img/select_arrow2.png) no-repeat 92% 50%/13px auto;}
     
 .FAQ{position: relative; left: 35px;
     bottom: 30px;
-    width: 905px; margin-bottom:250px;
+    width: 980px; margin-bottom:250px;
     font-size:16px;
     line-height: 5;
     overflow: hidden;}
@@ -203,8 +206,9 @@ select {background:url(../img/select_arrow2.png) no-repeat 92% 50%/13px auto;}
     padding-left: 50px;}
         
 .table_number{position: relative;
+    width: 500px;
      bottom: 200px;
-     left: 320px;}
+     left: 360px;}
         
 .table_number>ul>li{display: inline-block;}
         
@@ -231,7 +235,7 @@ a{color: #000;}
             
 .content_sub>ul{width: 600px;}
 .content_sub>ul>li{display: inline-block; position: relative;
-    top: 120px; left: 250px; margin-right: 15px;
+    top: 120px; left: 38vw; margin-right: 15px;
     font-size: 14px;}
         
 .content_sub>ul>li:first-child{
